@@ -1,0 +1,19 @@
+body{
+	/*
+	background-image:url('../img/debut_dark.png');
+	*/
+	font-size: 100%;
+}
+
+#quote-div{
+	top: 35%;
+	position: absolute;
+}
+
+#quote-author{
+	padding-left: 2em;
+}
+
+#quote-button{
+
+}
