@@ -9,7 +9,6 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/<int:quote_id>')
 def quote_page(quote_id=None):
-    return "hello world"
     if quote_id is None:
         return redirect(str(db.get_quote()['id']))
     else:
@@ -20,7 +19,6 @@ def quote_page(quote_id=None):
 @app.route('/ajax/random_quote.json')
 def ajax_quote():
     json_data = json.dumps(db.get_quote())
-    #json = '{"text": "Knowledge is gained in many schools.", "author": "Hawaiian Proverb", "id": 17580}'
     return Response(json_data, mimetype='application/json')
 
 
