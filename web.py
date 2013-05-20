@@ -9,6 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/<int:quote_id>')
 def quote_page(quote_id=None):
+    return "hello world"
     if quote_id is None:
         return redirect(str(db.get_quote()['id']))
     else:
@@ -24,4 +25,4 @@ def ajax_quote():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
