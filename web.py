@@ -3,6 +3,7 @@
 from flask import Flask, render_template, Response, redirect
 import db
 import json
+from os import environ
 
 app = Flask(__name__)
 
@@ -23,4 +24,5 @@ def ajax_quote():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    port = int(environ.get('PORT', 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)
