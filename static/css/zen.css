@@ -6,14 +6,10 @@ body{
 }
 
 #quote-div{
-	top: 35%;
-	position: absolute;
+	top: 25vh;
+	position: relative;
 }
 
 #quote-author{
 	padding-left: 2em;
-}
-
-#quote-button{
-
 }
